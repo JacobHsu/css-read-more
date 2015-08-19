@@ -8,7 +8,7 @@
 	
 	<!-- <link rel='stylesheet' href='css/style.css'> -->
 	<style>
-		p { margin: 0 0 15px 0; }
+		/*p { margin: 0 0 15px 0; }*/
 		.sidebar-box { 
 			width: 250px;
 			margin: 0 20px 0 0;
@@ -64,6 +64,9 @@
 		    line-height: 28px;
 		    padding: 0 13px;
 		}
+        .app-description-content {
+            overflow: auto;
+        }
 	</style>
 	
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
@@ -82,7 +85,7 @@
 
 				$p  = $(".read-more");
 				$up = $p.parent();
-				$ps = $up.find("p:not('.read-more')");
+				$ps = $up.find(".appDescriptionContent");
 				
 				// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
 				$ps.each(function() {
@@ -102,7 +105,7 @@
 				
 				// fade out read-more
 				$p.fadeOut();
-				
+				$(this).remove();
 				// prevent jump-down
 				return false;
 					
@@ -117,8 +120,8 @@
 	<div id="page-wrap">
 	
 		<div class="sidebar-box black">
-			<p>只要下載 Android 手機與平板電腦專用的 YouTube 官方版應用程式，您就能探索世界各地的熱門音樂影片、瞭解遊戲圈的最新趨勢、享受最火紅的娛樂內容和一覽發燒新聞等等。您可以訂閱喜愛的頻道、與好友分享各種影音內容，並在任何裝置上觀看 YouTube 影片。</p>
-	        <p>煥然一新的設計，讓您能更輕鬆快速地探索喜歡的影片，享受無窮樂趣。只要輕按圖示或用指尖左右滑動，您就能在推薦影片、訂閱內容或帳戶之間切換。此外，您還能訂閱喜歡的頻道、建立播放清單、編輯及上傳影片、透過留言或分享影片來發表看法，以及將影片投放至電視上等；您只需在應用程式內動動指尖，一切手到擒來。 </p>
+			<div class="appDescriptionContent app-description-content">只要下載 Android 手機與平板電腦專用的 YouTube 官方版應用程式，您就能探索世界各地的熱門音樂影片、瞭解遊戲圈的最新趨勢、享受最火紅的娛樂內容和一覽發燒新聞等等。您可以訂閱喜愛的頻道、與好友分享各種影音內容，並在任何裝置上觀看 YouTube 影片。</p>
+	        <p>煥然一新的設計，讓您能更輕鬆快速地探索喜歡的影片，享受無窮樂趣。只要輕按圖示或用指尖左右滑動，您就能在推薦影片、訂閱內容或帳戶之間切換。此外，您還能訂閱喜歡的頻道、建立播放清單、編輯及上傳影片、透過留言或分享影片來發表看法，以及將影片投放至電視上等；您只需在應用程式內動動指尖，一切手到擒來。 </div>
 			<p class="read-more"></p>
 		</div>
 		<br>
